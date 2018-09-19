@@ -1,0 +1,23 @@
+time=int(input("input time:"))
+accelaration=int(input("input accelaration:"))
+distance=int(input("input distance:"))
+
+v= time*accelaration
+maxdist=int(0.5*accelaration*time*time)
+u=int(0)
+limit=int(60)
+for i in range(0,time+1):
+    distance=int(0.5 * accelaration*i*i)
+    distance=int(distance/10)
+    print("duration",i,"distance:",distance * "*")
+
+if v > limit :
+    print("the person went over the speed limit.(max speed",v,"m/s")
+else :
+    print("the person did not went over the speed limit(max speed",v,"m/s")
+
+if distance<=maxdist:
+    print("the preson reached destination.(reached",distance,"m)")
+else:
+    print("didnt reached the destination.(reached",distance,"m)")
+
